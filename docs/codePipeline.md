@@ -27,7 +27,7 @@ In Step 3, select "AWS CodeBuild" in the "Build provider" dropdown and "Create a
 
 ![Step 3a](/img/codePipelineStep3a.jpg)
 
-Further down the Step 3 page, select "Ubuntu" as the "Operating system", "Node.js" as the "Runtime", and select the latest version available.  
+Further down the Step 3 page, select "Ubuntu" as the "Operating system", "Node.js" as the "Runtime", and select the latest version available.
 
 ![Step 3b](/img/codePipelineStep3b.jpg)
 
@@ -57,7 +57,7 @@ phases:
 
 In other words, during the Install phase, our buildspec.yml file will use npm to install the dependencies we need.  During the Build phase, it will use the serverless command line to build and deploy the service, and during the Post-Build phase it will use the test.sh script to launch the tests.
 
-In order to accomplish all that, we will have to apply an IAM role to our CodeBuild so that, in addition to having the permissions to operate correctly on all the AWS assets that CodePipeline will create, it also has all the permissions necessary to perform all those phases as described.  
+In order to accomplish all that, we will have to apply an IAM role to our CodeBuild so that, in addition to having the permissions to operate correctly on all the AWS assets that CodePipeline will create, it also has all the permissions necessary to perform all those phases as described.
 
 So in Step 5, click on the "Create Role" button:
 
